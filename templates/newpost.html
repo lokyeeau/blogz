@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <div class="form">
+    <form method = 'POST'>
+        <table>
+            <tr>
+                <td>
+                    <label for = 'title'>Title:
+                </td>
+                <td>
+                    <input type="text" name='post_title' rows="8"/>
+                </td>
+                <td>
+                    {% if error %}
+                        <p class="error">{{title_error}}</p>
+                    {% endif %}
+                    </label>
+                    <br>
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for = 'body'>Blog text:
+                </td>
+                <td>
+                    <textarea name="post_body" value="" cols="50" rows="8"></textarea>
+                </td>
+                <td>
+                    {% if error %}
+                        <p class="error">{{body_error}}</p>
+                    {% endif %}
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="Publish Me Now!"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+
+{% endblock%}

@@ -1,0 +1,46 @@
+.error {
+    color: red;
+    font-size: 16px;
+    font-style: italic;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-style: bold;
+}
+
+h2{
+    font-size: 22px;
+}
+
+h3{ 
+    font-size: 20px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul p{
+    display: inline-block;
+    font-family: sans-serif;
+    border-radius: 4px;
+    border-color: coral;
+    border-width: 1px;
+    position: relative;
+    text-align: left;
+    padding: .5em;
+}
+
+nav a{
+    text-decoration: none;
+    color: slategrey;
+}
+
+a:hover {
+    color: teal;
+}
+
+.form {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

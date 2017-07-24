@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="../static/styles/styles.css"/>
+    <title>My Blog</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <p><a href='/'>Home</a></p>
+            <p><a href='/blog'>All posts</a></p>
+            <p><a href="/newpost">Make a new blog entry</a></p>
+            <p><a href='/login'>Login</a></p>
+            <p><a href='/logout'>Logout</a></p>
+        </ul>
+    </nav>
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+     <ul>
+        {% for category,message in messages %}
+            <style>
+                .message {
+                    color: darkcyan;
+                    font-style: italic;
+                    font-size: 20px;
+                }
+            </style>
+            <p class = "{{category}}">{{ message }}</p>
+        {% endfor %}
+        </ul>
+    {% endwith %}
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+</html>
